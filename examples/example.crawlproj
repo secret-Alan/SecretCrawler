@@ -1,0 +1,62 @@
+{
+  "start_urls": ["http://quotes.toscrape.com/"],
+  "max_depth": 2,
+  "max_pages": 50,
+  "concurrency": 4,
+  "request_interval": 0.5,
+  "timeout": 20.0,
+  "max_retries": 3,
+  "max_redirects": 10,
+  "headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
+    "Accept-Language": "en-US,en;q=0.9"
+  },
+  "cookies": {},
+  "proxies": [],
+  "user_agents": [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15"
+  ],
+  "rotate_user_agents": true,
+  "respect_robots": true,
+  "allowed_domains": ["quotes.toscrape.com"],
+  "restrict_to_start_domains": true,
+  "url_whitelist_regex": [],
+  "url_blacklist_regex": ["/login", "/admin"],
+  "extraction_rules": [
+    {
+      "name": "text",
+      "selector_type": "CSS",
+      "expression": "span.text",
+      "attribute": ""
+    },
+    {
+      "name": "author",
+      "selector_type": "CSS",
+      "expression": "small.author",
+      "attribute": ""
+    },
+    {
+      "name": "tags",
+      "selector_type": "CSS",
+      "expression": "div.tags a.tag",
+      "attribute": ""
+    },
+    {
+      "name": "url",
+      "selector_type": "CSS",
+      "expression": "span a[href]",
+      "attribute": "href"
+    }
+  ],
+  "auto_follow_links": true,
+  "auto_detect_pagination": true,
+  "storage_format": "CSV",
+  "output_path": "output/quotes.csv",
+  "download_files": false,
+  "download_url_regex": "",
+  "download_dir": "downloads",
+  "persist_state_sqlite": false,
+  "method": "GET",
+  "post_data": {}
+}
