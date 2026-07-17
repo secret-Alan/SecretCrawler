@@ -243,7 +243,7 @@ pyinstaller --noconsole --onefile --icon app.ico main.py
 
 ## 👥 贡献者
 
-- **secret-Alan** — 主开发者
+- **secret-Alan** 
 
 ## 🔗 仓库
 
