@@ -243,11 +243,12 @@ pyinstaller --noconsole --onefile --icon app.ico main.py
 
 ## 👥 贡献者
 
-- **secret-Alan** 
+- **secret-Alan**
+- **MCsanbu**
 
 ## 🔗 仓库
 
-- GitHub: https://github.com/secret-Alan/internet_crawler.git
+- GitHub: https://github.com/MCsanbu/SecretCrawler.git
 
 ---
 
